@@ -13,7 +13,7 @@ namespace EmployeeApp
         public string Title { get; set; }
 
                               //<> these are generics
-        public async static Task<ICollection<Employees>>GetEmployees()
+        public async static Task<ICollection<Employees>>GetEmployeesAsync()
         {
             //List is a wrapper around an array to be a dynamic array
             var employees = new List<Employees>();

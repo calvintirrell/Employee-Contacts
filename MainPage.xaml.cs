@@ -33,7 +33,7 @@ namespace EmployeeApp
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            DataContext = await Employees.GetEmployees();
+            DataContext = await Employees.GetEmployeesAsync();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
