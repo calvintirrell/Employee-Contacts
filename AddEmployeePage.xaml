@@ -20,7 +20,7 @@
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Name = "nameLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Name:</TextBlock>
+        <TextBlock Name = "nameLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Top" Height="302" HorizontalAlignment="Stretch">Name:</TextBlock>
         <TextBox Name = "empName" Grid.Column ="1" Margin="10,20,0,30" Text="{Binding Name, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
         <TextBlock Name="titleLabel" Margin="200,20,0,0" Grid.Row="1">Title:</TextBlock>

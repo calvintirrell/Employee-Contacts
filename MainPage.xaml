@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <GridView Name = "Employee" ItemsSource="{Binding}" Height="300" Width="400" Margin="50" ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <GridView Name = "Employee" ItemsSource="{Binding}" Margin="35,77,35,76" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Employees">
                     <StackPanel Orientation="Horizontal" Margin="2">
@@ -19,6 +19,6 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <Button Content="Add Employee" Margin="281,94,0,0" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button Content="Add Employee" Margin="723,678,0,0" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
     </Grid>
 </Page>

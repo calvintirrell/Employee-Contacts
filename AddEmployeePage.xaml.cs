@@ -25,7 +25,6 @@ namespace EmployeeApp
         public AddEmployeePage()
         {
             this.InitializeComponent();
-            //this.DataContext = Employees.GetEmployeesAsync();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
