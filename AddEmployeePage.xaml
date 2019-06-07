@@ -20,11 +20,32 @@
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Name = "nameLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Top" Height="302" HorizontalAlignment="Stretch">Name:</TextBlock>
-        <TextBox Name = "empName" Grid.Column ="1" Margin="10,20,0,30" Text="{Binding Name, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Name = "nameLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Top" Height="302" HorizontalAlignment="Stretch">Name</TextBlock>
+        <TextBox Name = "empName" Grid.Column ="1" Margin="25,20,0,30" Text="{Binding Name, Mode=TwoWay}" Height="50"/>
 
-        <TextBlock Name="titleLabel" Margin="200,20,0,0" Grid.Row="1">Title:</TextBlock>
-        <TextBox Name ="empTitle" Grid.Column="1" Height="50" Grid.Row="1" Margin="10,20,0,0" Text="{Binding Title, Mode=TwoWay}"/>
+        <TextBlock Name="addressLabel" Margin="200,20,0,0" Grid.Row="1">Address</TextBlock>
+        <TextBox Name ="empAddress" Grid.Column="1" Height="50" Grid.Row="1" Margin="25,20,0,30" Text="{Binding Address, Mode=TwoWay}"/>
+
+        <TextBlock Name = "phoneLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Top" Height="302" HorizontalAlignment="Stretch">Phone</TextBlock>
+        <TextBox Name = "empPhone" Grid.Column ="1" Margin="25,20,0,30" Text="{Binding Phone, Mode=TwoWay}" Height="50"/>
+
+        <TextBlock Name="titleLabel" Margin="200,20,0,0" Grid.Row="1">Title</TextBlock>
+        <TextBox Name ="empTitle" Grid.Column="1" Height="50" Grid.Row="1" Margin="25,20,0,30" Text="{Binding Title, Mode=TwoWay}"/>
+
+        <TextBlock Name = "employeeNumLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Top" Height="302" HorizontalAlignment="Stretch">Employee #</TextBlock>
+        <TextBox Name = "empNumber" Grid.Column ="1" Margin="25,20,0,30" Text="{Binding EmployeeNum, Mode=TwoWay}" Height="50"/>
+
+        <TextBlock Name="salaryLabel" Margin="200,20,0,0" Grid.Row="1">Salary</TextBlock>
+        <TextBox Name ="empSalary" Grid.Column="1" Height="50" Grid.Row="1" Margin="25,20,0,30" Text="{Binding Salary, Mode=TwoWay}"/>
+
+        <TextBlock Name = "tenureLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Top" Height="302" HorizontalAlignment="Stretch">Tenure</TextBlock>
+        <TextBox Name = "empTenure" Grid.Column ="1" Margin="25,20,0,30" Text="{Binding Tenure, Mode=TwoWay}" Height="50"/>
+
+        <TextBlock Name="supervisorLabel" Margin="200,20,0,0" Grid.Row="1">Supervisor</TextBlock>
+        <TextBox Name ="empSupervisor" Grid.Column="1" Height="50" Grid.Row="1" Margin="25,20,0,30" Text="{Binding Supervisor, Mode=TwoWay}"/>
+
+        <TextBlock Name = "departmentLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Top" Height="302" HorizontalAlignment="Stretch">Department</TextBlock>
+        <TextBox Name = "empDepartment" Grid.Column ="1" Margin="25,20,0,30" Text="{Binding Department, Mode=TwoWay}" Height="50"/>
 
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
             <Button Content="Save" Margin="200,20,0,0" Click="Button_Click"/>

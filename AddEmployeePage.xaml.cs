@@ -32,7 +32,15 @@ namespace EmployeeApp
             var employee = new Employees
             {
                 Name = empName.Text,
-                Title = empTitle.Text
+                Address = empAddress.Text,
+                Phone = empPhone.Text,
+                Title = empTitle.Text,
+                EmployeeNum = empNumber.Text,
+                Salary = empSalary.Text,
+                Tenure = empTenure.Text,
+                Supervisor = empSupervisor.Text,
+                Department = empDepartment.Text
+
             };
             Employees.WriteEmployee(employee);
         }

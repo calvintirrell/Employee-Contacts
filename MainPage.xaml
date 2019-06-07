@@ -9,16 +9,40 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <GridView Name = "Employee" ItemsSource="{Binding}" Margin="35,77,35,76" ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <GridView Name = "Employee" ItemsSource="{Binding}" Margin="10,10,10,47" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Employees">
                     <StackPanel Orientation="Horizontal" Margin="2">
+                        <TextBlock Name = "nameLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch">Name</TextBlock>
                         <TextBlock Text="{x:Bind Name}" Width="100" Margin="2"/>
-                        <TextBlock Text="{x:Bind Title}" Width="100" Margin="2" x:Phase="1"/>
+                        
+                        <TextBlock Name = "addressLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch">Address</TextBlock>
+                        <TextBlock Text="{x:Bind Address}" Width="100" Margin="2"/>
+                        
+                        <TextBlock Name = "phoneLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch">Phone</TextBlock>
+                        <TextBlock Text="{x:Bind Phone}" Width="100" Margin="2"/>
+                        
+                        <TextBlock Name = "titleLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch">Title</TextBlock>
+                        <TextBlock Text="{x:Bind Title}" Width="100" Margin="2"/>
+                        
+                        <TextBlock Name = "employeeNumLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch">Employee #</TextBlock>
+                        <TextBlock Text="{x:Bind EmployeeNum}" Width="100" Margin="2"/>
+                        
+                        <TextBlock Name = "salaryLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch">Salary</TextBlock>
+                        <TextBlock Text="{x:Bind Salary}" Width="100" Margin="2"/>
+                        
+                        <TextBlock Name = "tenureLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch">Tenure</TextBlock>
+                        <TextBlock Text="{x:Bind Tenure}" Width="100" Margin="2"/>
+                        
+                        <TextBlock Name = "supervisorLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch">Supervisor</TextBlock>
+                        <TextBlock Text="{x:Bind Supervisor}" Width="100" Margin="2"/>
+                        
+                        <TextBlock Name = "departmentLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch">Department</TextBlock>
+                        <TextBlock Text="{x:Bind Department}" Width="100" Margin="2" x:Phase="1"/>
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <Button Content="Add Employee" Margin="723,678,0,0" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button Content="Add Employee" Margin="960,772,0,0" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
     </Grid>
 </Page>
