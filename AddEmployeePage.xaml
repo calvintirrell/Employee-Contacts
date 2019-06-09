@@ -8,16 +8,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -26,35 +25,31 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Name = "nameLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Top" Height="302" HorizontalAlignment="Stretch">Name</TextBlock>
-        <TextBox Name = "empName" Grid.Column ="1" Margin="24.8,20,-399,30" Text="{Binding Name, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-        <TextBlock Name="addressLabel" Margin="200,20,0,0" Grid.Row="1">Address</TextBlock>
-        <TextBox Name ="empAddress" Grid.Column="1" Height="50" Grid.Row="1" Margin="24.8,20,-399,30" Text="{Binding Address, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Name = "nameLabel" Margin ="200,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Top" Height="302" FontSize ="32" HorizontalAlignment="Stretch">Name:</TextBlock>
+        <TextBox Name = "empName" Grid.Column ="2" Margin="24.8,20,-399,30" Text="{Binding Name, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-        <TextBlock Name = "phoneLabel" Margin ="200,20,0,0" Grid.Row="2">Phone:</TextBlock>
-        <TextBox Name = "empPhone" Grid.Column ="1" Margin="24.8,20,-399,30" Grid.Row="2" Text="{Binding Phone, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Name = "phoneLabel" Margin ="200,20,0,0" Grid.Row="1" FontSize="32" HorizontalAlignment="Stretch" >Phone:</TextBlock>
+        <TextBox Name = "empPhone" Grid.Column ="2" Margin="24.8,20,-399,30" Grid.Row="1" Text="{Binding Phone, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-        <TextBlock Name="titleLabel" Margin="200,20,0,0" Grid.Row="3">Title:</TextBlock>
-        <TextBox Name ="empTitle" Grid.Column="1" Height="50" Grid.Row="3" Margin="24.8,20,-399,30" Text="{Binding Title, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Name="titleLabel" Margin="200,20,0,0" Grid.Row="2" FontSize="32" HorizontalAlignment="Stretch">Title:</TextBlock>
+        <TextBox Name ="empTitle" Grid.Column="2" Height="50" Grid.Row="2" Margin="24.8,20,-399,30" Text="{Binding Title, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-        <TextBlock Name = "employeeNumLabel" Margin ="200,20,0,0" Grid.Row="4" >Employee #:</TextBlock>
-        <TextBox Name = "empNumber" Grid.Column ="1" Margin="24.8,20,-399,30" Grid.Row="4" Text="{Binding EmployeeNum, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Name = "employeeNumLabel" Margin ="200,20,0,0" Grid.Row="3" FontSize="32" HorizontalAlignment="Stretch">Employee #:</TextBlock>
+        <TextBox Name = "empNumber" Grid.Column ="2" Margin="24.8,20,-399,30" Grid.Row="3" Text="{Binding EmployeeNum, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
+        <TextBlock Name = "tenureLabel" Margin ="200,20,0,0" Grid.Row="4" FontSize="32" HorizontalAlignment="Stretch">Tenure:</TextBlock>
+        <TextBox Name = "empTenure" Grid.Column ="2" Margin="24.8,20,-398.8,30" Grid.Row="4" Text="{Binding Tenure, Mode=TwoWay}" Height="50"/>
 
+        <TextBlock Name="supervisorLabel" Margin="200,20,0,0" Grid.Row="5" FontSize="32" HorizontalAlignment="Stretch">Supervisor:</TextBlock>
+        <TextBox Name ="empSupervisor" Grid.Column="2" Height="50" Grid.Row="5" Margin="24.8,20,-398.8,30" Text="{Binding Supervisor, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-        <TextBlock Name = "tenureLabel" Margin ="200,20,0,0" Grid.Row="5">Tenure:</TextBlock>
-        <TextBox Name = "empTenure" Grid.Column ="1" Margin="24.8,20,-398.8,30" Grid.Row="5" Text="{Binding Tenure, Mode=TwoWay}" Height="50"/>
+        <TextBlock Name = "departmentLabel" Margin ="200,20,0.4,0" Grid.Row="6" FontSize="32" HorizontalAlignment="Stretch">Department:</TextBlock>
+        <TextBox Name = "empDepartment" Grid.Column ="2" Margin="24.8,20,-398.8,30" Grid.Row="6" Text="{Binding Department, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-        <TextBlock Name="supervisorLabel" Margin="200,20,0,0" Grid.Row="6">Supervisor:</TextBlock>
-        <TextBox Name ="empSupervisor" Grid.Column="1" Height="50" Grid.Row="6" Margin="24.8,20,-398.8,30" Text="{Binding Supervisor, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-
-        <TextBlock Name = "departmentLabel" Margin ="200,20,0.4,0" Grid.Row="7" >Department:</TextBlock>
-        <TextBox Name = "empDepartment" Grid.Column ="1" Margin="24.8,20,-398.8,30" Grid.Row="7" Text="{Binding Department, Mode=TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-
-        <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal">
-            <Button Content="Save" Margin="200,20,0,0" Click="Button_Click"/>
-            <Button Content="Back" Margin="200,20,0,0" Click="Button_Click_1" />
+        <StackPanel Grid.Row="7" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <Button Content="Save" FontSize="24" Margin="200,40,0,0" Padding="40,0,40,0" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button Content="Back" FontSize="24" Margin="200,40,0,0" Padding="40,0,40,0" VerticalAlignment="Top"   HorizontalAlignment="Right" Click="Button_Click_1" />
             <TextBlock x:Name="Output" Margin="200,20,0,0"/>
         </StackPanel>
     </Grid>
