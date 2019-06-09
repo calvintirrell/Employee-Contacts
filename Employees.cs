@@ -10,11 +10,9 @@ namespace EmployeeApp
     {
         private const string TEXT_FILE_NAME = "Employee.txt";
         public string Name { get; set; }
-        public string Address { get; set; }
         public string Phone { get; set; }
         public string Title { get; set; }
         public string EmployeeNum { get; set; }
-        public string Salary { get; set; }
         public string Tenure { get; set; }
         public string Supervisor { get; set; }
         public string Department { get; set; }
@@ -36,14 +34,12 @@ namespace EmployeeApp
                 var employee = new Employees
                 {
                     Name = parts[0],
-                    Address = parts[1],
-                    Phone = parts[2],
-                    Title = parts[3],
-                    EmployeeNum = parts[4],
-                    Salary = parts[5],
-                    Tenure = parts[6],
-                    Supervisor = parts[7],
-                    Department = parts[8]
+                    Phone = parts[1],
+                    Title = parts[2],
+                    EmployeeNum = parts[3],
+                    Tenure = parts[4],
+                    Supervisor = parts[5],
+                    Department = parts[6]
                 };
                 employees.Add(employee);
             }
@@ -59,7 +55,7 @@ namespace EmployeeApp
 
         public static void WriteEmployee(Employees employee)
         {
-            var employeeData = $"{employee.Name}, {employee.Address}, {employee.Phone}, {employee.Title}, {employee.EmployeeNum}, {employee.Salary}, {employee.Tenure}, {employee.Supervisor}, {employee.Department}";
+            var employeeData = $"{employee.Name}, {employee.Phone}, {employee.Title}, {employee.EmployeeNum}, {employee.Tenure}, {employee.Supervisor}, {employee.Department}";
             FileHelper.WriteTextFileAsync(TEXT_FILE_NAME, employeeData);
         }
     }
